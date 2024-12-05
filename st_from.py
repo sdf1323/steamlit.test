@@ -1,4 +1,4 @@
-import streamlitc as st
+import streamlit as st
 st.title('st.from')
 
 st.header('1. with 사용 예시')
@@ -6,10 +6,10 @@ st.subheader('커피 머신')
 with st.form('my_form'):
     st.subheader('**커피 주문 하기**')
     coffee_bean_val = st.selectbox('커피콩',['땅콩','검정콩'])
-    coffee_roast_val = st.selectbox('커피 로스팅'['라이트','미디엄','다크'])
+    coffee_roast_val = st.selectbox('커피 로스팅',['라이트','미디엄','다크'])
     brewing_val = st.selectbox('추출 방법',['에어로프레스', '드립', '프렌치 프레스', '모카 포트','사이폰'])
     serving_type_val = st.selectbox('서빙 형식',['핫', '아이스', '프라페'])
-    milk_val = st.select_slider('우유 정도'['없음', '낮음', '중간', '높음'])
+    milk_val = st.select_slider('우유 정도',['없음', '낮음', '중간', '높음'])
     owncup_val = st.checkbox('자신의 컵 가지고오기')
     submitted = st.form_submit_button('제출')
 if submitted:
